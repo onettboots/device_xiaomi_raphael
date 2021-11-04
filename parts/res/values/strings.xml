@@ -106,4 +106,11 @@
     <string name="refresh_default">Default</string>
     <string name="refresh_standard">Standard (60Hz)</string>
     <string name="refresh_high_72">High (72Hz)</string>
+
+    <!-- Dirac settings: Headset types -->
+    <string name="dirac_headset_ear_four">Mi Quadruple Driver Earphones</string>
+    <string name="dirac_headset_piston_typec">Mi In-Ear Headphones (Type-C)</string>
+    <string name="dirac_headset_bluetooth_collar">Mi Bluetooth Neckband</string>
+    <string name="dirac_headset_bluetooth_linefree">Mi Bluetooth Earphones</string>
+    <string name="dirac_headset_redmi_earphones">Redmi Earphones</string>
 </resources>
