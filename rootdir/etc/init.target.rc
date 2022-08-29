@@ -27,6 +27,8 @@
 #
 #
 
+import /vendor/etc/init/thermal/android.hardware.thermal@2.0-service.qti.rc
+
 on early-init
     write /sys/block/zram0/disksize 4294967296
 
