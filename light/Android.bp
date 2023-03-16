@@ -14,21 +14,22 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.lights-service.raphael",
-    overrides: ["android.hardware.lights-service.qti"],
+    name: "android.hardware.light@2.0-service.xiaomi_sm8150",
+    defaults: ["hidl_defaults"],
+    vintf_fragments: ["android.hardware.light@2.0-service.xiaomi_sm8150.xml"],
+    init_rc: ["android.hardware.light@2.0-service.xiaomi_sm8150.rc"],
     relative_install_path: "hw",
-    init_rc: ["aidl/android.hardware.lights.raphael.rc"],
-    vintf_fragments: ["aidl/android.hardware.lights.raphael.xml"],
+    srcs: [
+        "service.cpp",
+        "Light.cpp",
+    ],
     vendor: true,
     shared_libs: [
+        "android.hardware.light@2.0",
         "libbase",
-        "liblog",
         "libhardware",
-        "libbinder_ndk",
-        "android.hardware.light-V1-ndk",
-    ],
-    srcs: [
-        "aidl/Lights.cpp",
-        "aidl/main.cpp",
+        "libhidlbase",
+        "liblog",
+        "libutils",
     ],
 }
