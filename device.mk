@@ -300,8 +300,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.raphael \
-    android.hardware.light-service.xiaomi
+    android.hardware.lights-service.raphael
 
 # Livedisplay
 PRODUCT_PACKAGES += \
