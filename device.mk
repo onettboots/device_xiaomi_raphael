@@ -300,7 +300,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.xiaomi
+    android.hardware.light@2.0-service.xiaomi_raphael
 
 # Livedisplay
 PRODUCT_PACKAGES += \
@@ -381,7 +381,6 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.raphael-libperfmgr \
-    libqti-perfd-client \
     android.hardware.power.stats@1.0-service.mock
 
 PRODUCT_COPY_FILES += \
