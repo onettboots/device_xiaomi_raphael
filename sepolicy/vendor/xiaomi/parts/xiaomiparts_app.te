@@ -1,3 +1,7 @@
+type xiaomiparts_app, domain;
+
+typeattribute xiaomiparts_app mlstrustedsubject;
+
 app_domain(xiaomiparts_app)
 
 hal_client_domain(xiaomiparts_app, hal_motor)
@@ -25,7 +29,7 @@ allow xiaomiparts_app {
   thermal_service
 }:service_manager find;
 
-allow xiaomiparts_app default_prop:file read;
+# allow xiaomiparts_app default_prop:file { read };
 
 allow xiaomiparts_app system_app_data_file:dir create_dir_perms;
 allow xiaomiparts_app system_app_data_file:{ file lnk_file } create_file_perms;
