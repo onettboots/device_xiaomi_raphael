@@ -208,7 +208,6 @@ vendor.power.pasr.enabled=true
 # Perf
 ro.vendor.extension_library=libqti-perfd-client_system.so
 ro.vendor.perf-hal.ver=2.2
-ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf.scroll_opt=true
 ro.vendor.qspm.enable=true
 ro.vendor.beluga.p=0x3
