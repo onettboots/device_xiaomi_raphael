@@ -591,6 +591,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
+# Thermal
+$(call soong_config_set,thermal_hal_feature,pid,apply_1_0)
+
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.pixel \
+    thermal_symlinks
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+    $(LOCAL_PATH)/configs/thermal-engine-msmnile-normal_mode.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-msmnile-normal_mode.conf
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.dual_role_usb
