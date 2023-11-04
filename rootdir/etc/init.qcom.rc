@@ -405,6 +405,9 @@ on charger
     setprop persist.sys.usb.config mass_storage
     start vendor.qcom-post-boot
 
+    # Enable thermal mitigation
+    write /sys/devices/virtual/thermal/tz-by-name/backup-charge/mode enabled
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
