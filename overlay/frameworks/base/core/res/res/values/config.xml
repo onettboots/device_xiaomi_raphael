@@ -715,4 +715,7 @@
 
     <!-- See AmbientSensor.AmbientColorTemperatureSensor. The ambient color temperature sensor name. -->
     <string name="config_displayWhiteBalanceColorTemperatureSensorName">com.google.sensor.color</string>
+
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">true</bool>
 </resources>
