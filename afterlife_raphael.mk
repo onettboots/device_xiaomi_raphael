@@ -13,13 +13,15 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+
+# Inherit from raphael device
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
 # Inherit some common afterlifeOS stuff.
 $(call inherit-product, vendor/afterlife/config/common.mk)
-
-# Maintainer Flag (one word only/no spacing)
-MAINTAINER := ΛＲＣＨＩＴΣＣＴツ(@SageOfD6Path)
 
 # GAPPS build flag, if not defined build type is vanilla
 #afterlife_GAPPS = full
