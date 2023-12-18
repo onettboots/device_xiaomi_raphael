@@ -1,4 +1,4 @@
-# Copyright (C) 2020 YAAP
+# Copyright (C) 2020 Project Afterlife
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,14 +15,29 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common afterlife stuff.
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
-#Boot Animation
-scr_resolution := 1080
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Charging Animation
+USE_PIXEL_CHARGING := true
+
+# Etras
+TARGET_SUPPORTS_BLUR := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_TOUCHGESTURES := true
+
+# Afterlife
+AFTERLIFE_MAINTAINER := OnettBoots
+AFTERLIFE_GAPPS := true
+AFTERLIFE_CORE := true
+AFTERLIFE_EXTRA := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := yaap_raphael
+PRODUCT_NAME := afterlife_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro
