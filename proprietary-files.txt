@@ -867,6 +867,11 @@ vendor/lib64/libkernelmanager.so|6e34cfed1b61ef27ac3740cf477e1ed836695513
 vendor/lib64/libllvm-glnext.so|de75e9c020c8a0b07cf7873d72cd3ec3223b74ef
 vendor/lib64/libllvm-qcom.so|cc4be65b93128742f5ee9bec9cbf4ad65a88fa1d
 
+# adreno v@0746.0 
+vendor/firmware/a650_gmu.bin|c744acb10afb7c980d333c5b6521e2a18993ff14
+vendor/firmware/a650_sqe.fw|a011deb174929b874fb668d7c8041cfb712b6417
+vendor/lib/libllvm-qgl.so|9a507fad7428d79b81b22aa6b6ae30ab9ef99020
+vendor/lib64/libllvm-qgl.so|d3ff4746923cd7b063624eaab01a6b2b39ea9aff
 # HotwordEnrollment - from raphael-user-11-RKQ1.200826.002-V12.5.2.0.RFKMIXM-release-keys
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|62e301d2f386771facd9a9aa546c0fcc241116da
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|8639661f6fad570723bc6f2759da76604bd804fa

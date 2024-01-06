@@ -15,3 +15,9 @@
 
 # HBM
 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm           u:object_r:vendor_sysfs_hbm:s0
+
+# Adreno V@0746.0
+/vendor/firmware/a650_gmu.bin                                       u:object_r:vendor_firmware_file:s0
+/vendor/firmware/a650_sqe.fw                                        u:object_r:vendor_firmware_file:s0
+/vendor/lib/libllvm-qgl.so                                          u:object_r:same_process_hal_file:s0
+/vendor/lib64/libllvm-qgl.so                                        u:object_r:same_process_hal_file:s0
