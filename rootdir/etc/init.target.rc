@@ -141,6 +141,10 @@ on boot
     chown system system /sys/kernel/kprofiles/kp_mode
     chmod 0660 /sys/kernel/kprofiles/kp_mode
 
+    # Lineage Health
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+
 on property:sys.boot_completed=1
     # STOP EATING MY BATTERY AFTER 100H OF UPTIME FUCK YOU
     stop statsd
