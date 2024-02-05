@@ -19,6 +19,11 @@ ro.charger.enable_suspend=true
 pm.sleep_mode=1
 vendor.post_boot.parsed=1
 
+# DPM
+persist.vendor.dpm.feature=1
+persist.vendor.dpm.loglevel=0
+persist.vendor.dpm.nsrm.bkg.evt=3955
+
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
