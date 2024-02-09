@@ -1,1 +1,4 @@
 allow system_server proc_last_kmsg:file r_file_perms;
+
+# Allow system_server to get App Zygote PGID
+allow system_server app_zygote:process getpgid;
