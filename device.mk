@@ -43,7 +43,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/xiaomi 
 
 # Hardware
 PRODUCT_COPY_FILES += \
