@@ -27,8 +27,6 @@
 #
 #
 
-import /vendor/etc/init/init.mi_thermald.rc
-
 on early-init
     write /sys/block/zram0/disksize 4294967296
 
