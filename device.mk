@@ -563,8 +563,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Thermal
+$(call soong_config_set,thermal_hal_feature,pid,apply_1_0)
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.pixel \
+    android.hardware.thermal@2.0-service.pixel \
     thermal_symlinks
 
 PRODUCT_COPY_FILES += \
