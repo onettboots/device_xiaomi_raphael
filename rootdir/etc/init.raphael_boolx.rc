@@ -7,3 +7,16 @@ on post-fs-data
 # Migrate tasks again in case kernel threads are created during boot
 on property:sys.boot_completed=1
     copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
+
+# Create thermal symlink in off charging mode
+on charger
+    # Wait for insmod_sh to finish all common modules
+    wait_for_prop vendor.common.modules.ready 1
+
+    # Wait for insmod_sh to finish all device specific modules
+    wait_for_prop vendor.device.modules.ready 1
+
+    mkdir /dev/thermal 0750 system system
+    mkdir /dev/thermal/tz-by-name 0750 system system
+    mkdir /dev/thermal/cdev-by-name 0750 system system
+    restart vendor.thermal.symlinks
