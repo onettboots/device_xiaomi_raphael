@@ -33,13 +33,7 @@
     <!-- Whether to show min/max refresh rate in display settings -->
     <bool name="config_show_refresh_rate_controls">true</bool>
 
-    <!-- Battery Health -->
-    <bool name="config_supportBatteryHealth">true</bool>
-    <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
-    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
-    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
-
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">100</integer>
 
-<x/resources>
+</resources>
