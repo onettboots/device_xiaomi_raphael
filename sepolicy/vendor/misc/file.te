@@ -11,5 +11,3 @@ type sysfs_kgsl, sysfs_type, fs_type;
 
 # Livedisplay
 type vendor_sysfs_hbm, sysfs_type, fs_type;
-
-type pps_socket, file_type;
