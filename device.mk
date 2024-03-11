@@ -581,8 +581,8 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/etc/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
-    $(LOCAL_PATH)/configs/etc/thermal-engine-msmnile-normal_mode.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-msmnile-normal_mode.conf
+    $(LOCAL_PATH)/thermal/etc/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+    $(LOCAL_PATH)/thermal/etc/thermal-engine-msmnile-normal_mode.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-msmnile-normal_mode.conf
 
 # USB
 PRODUCT_PACKAGES += \
