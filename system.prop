@@ -153,10 +153,6 @@ ro.config.sdha_apps_bg_min=8
 ro.lmk.thrashing_limit=200
 ro.lmk.psi_partial_stall_ms=120
 
-# ART
-dalvik.vm.dex2oat-filter=everything
-dalvik.vm.image-dex2oat-filter=everything
-
 # WiFi Scan Interval (default = 15s)
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.supplicant_scan_interval=600
