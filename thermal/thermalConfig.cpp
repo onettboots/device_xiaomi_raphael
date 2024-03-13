@@ -725,33 +725,6 @@ namespace implementation {
 
 	std::vector<struct target_therm_cfg>  sensor_cfg_msmnile = {
 		{
-			TemperatureType::CPU,
-			cpu_sensors_kona,
-			"",
-			95000,
-			115000,
-			95000,
-			true,
-		},
-		{
-			TemperatureType::GPU,
-			{ "gpuss-0-usr" },
-			"gpu0",
-			95000,
-			115000,
-			95000,
-			true,
-		},
-		{
-			TemperatureType::GPU,
-			{ "gpuss-1-usr" },
-			"gpu1",
-			95000,
-			115000,
-			95000,
-			true,
-		},
-		{
 			TemperatureType::SKIN,
 			{ "xo-therm" },
 			"skin",
