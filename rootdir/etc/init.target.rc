@@ -28,6 +28,7 @@
 #
 
 import /vendor/etc/init/android.hardware.thermal@2.0-service.qti.rc
+import /vendor/etc/init/init_thermal-engine.rc
 
 on early-init
     # Disable EAS
