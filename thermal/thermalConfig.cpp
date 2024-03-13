@@ -737,9 +737,9 @@ namespace implementation {
 			TemperatureType::BCL_CURRENT,
 			{ "pm8150b-ibat-lvl0" },
 			"ibat",
-			4500,
+			4000,
 			5000,
-			4500,
+			4000,
 			true,
 		},
 		{
