@@ -107,6 +107,11 @@ on boot
     # modules
     mkdir /dev/socket/qmux_radio 2770 radio radio
 
+    # Thermal
+    mkdir /dev/thermal 0750 system system
+    symlink /sys/devices/virtual/thermal/tz-by-name /dev/thermal/tz-by-name
+    symlink /sys/devices/virtual/thermal/cdev-by-name /dev/thermal/cdev-by-name
+
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
     # the connection they belong to.
