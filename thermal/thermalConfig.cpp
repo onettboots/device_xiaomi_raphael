@@ -725,8 +725,26 @@ namespace implementation {
 
 	std::vector<struct target_therm_cfg>  sensor_cfg_msmnile = {
 		{
+                        TemperatureType::SKIN,
+                        { "sdm-therm" },
+                        "skin",
+                        40000,
+                        95000,
+                        40000,
+                        true,
+                },
+		{
 			TemperatureType::SKIN,
-			{ "xo-therm" },
+			{ "quiet_therm" },
+			"skin",
+			40000,
+			95000,
+			40000,
+			true,
+		},
+		{
+			TemperatureType::SKIN,
+			{ "xo_therm" },
 			"skin",
 			40000,
 			95000,
