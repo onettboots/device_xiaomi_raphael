@@ -216,7 +216,7 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 debug.mdpcomp.logs=0
 debug.sdm.support_writeback=0
-debug.sf.latch_unsignaled=0
+debug.sf.latch_unsignaled=1
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_gl_backpressure=1
 debug.sf.disable_client_composition_cache=1
@@ -290,13 +290,8 @@ persist.vendor.radio.sib16_support=1
 sys.vendor.shutdown.waittime=500
 
 # SurfaceFlinger
-debug.sf.early.sf.duration=16000000
-debug.sf.early.app.duration=16500000
-debug.sf.earlyGl.sf.duration=13500000
-debug.sf.earlyGl.app.duration=21000000
-debug.sf.late.sf.duration=10500000
-debug.sf.late.app.duration=20500000
-debug.sf.use_phase_offsets_as_durations=1
+debug.sf.enable_advanced_sf_phase_offset=1
+debug.sf.predict_hwc_composition_strategy=0
 
 # SoC
 ro.soc.manufacturer=QTI
