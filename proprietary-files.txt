@@ -1079,6 +1079,7 @@ vendor/lib64/libdiag.so|3007e1709a4713b0ab6abd76b10c3a822c436c61
 vendor/lib64/libdsutils.so|9a9260a111c41c1d7107eb6fb48c2402257d473f
 vendor/lib64/libidl.so|857f7a75a51ade7d3621f7fa6da0e9461244ca01
 vendor/lib64/libmdmdetect.so|4dee2a700aad658f3f30a6da069c867307ed371c
+vendor/lib64/libQTEEConnector_listener.so
 
 # QSPM
 vendor/bin/vendor.qti.qspmhal@1.0-service
