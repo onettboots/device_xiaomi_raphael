@@ -5,6 +5,7 @@ allow hal_nfc_default vendor_nfc_vendor_data_file:dir {
   search
 };
 allow hal_nfc_default vendor_nfc_vendor_data_file:file create_file_perms;
+allow hal_nfc_default vendor_nfc_vendor_data_file:dir { write search };
 
 # Data file access
 add_hwservice(hal_nfc_default, nxpnfc_hwservice)
