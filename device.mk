@@ -137,6 +137,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera2ndk_vendor \
     libdng_sdk.vendor \
+    libgui_vendor \
+    libpiex_shim \
     libshim_megvii \
     libpiex_shim \
     libstdc++_vendor \
