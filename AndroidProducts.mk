@@ -13,9 +13,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/apollo_raphael.mk
+    $(LOCAL_DIR)/lineage_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    apollo_raphael-user \
-    apollo_raphael-userdebug \
-    apollo_raphael-eng
+    lineage_raphael-user \
+    lineage_raphael-userdebug \
+    lineage_raphael-eng
