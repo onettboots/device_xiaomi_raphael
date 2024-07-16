@@ -740,9 +740,6 @@ vendor/firmware/a640_zap.b02
 vendor/firmware/a640_zap.elf
 vendor/firmware/a640_zap.mdt
 
-# IRQ balance - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
-vendor/bin/msm_irqbalance|b075c2f4092c175950a2c26d19bf2013e2efd6d5
-
 # FM - from LA.UM.9.1.r1-12900-SMxxx0.0
 system_ext/lib64/fm_helium.so|0d810fb4f094daf6f399a3d13f379a13114b21a6
 system_ext/lib64/libfm-hci.so|66ccf3fc817cf744871ea4178702359bb8babbd5
