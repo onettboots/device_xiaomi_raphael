@@ -210,6 +210,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
+    android.hardware.graphics.allocator@2.0.vendor \
     vendor.qti.hardware.display.mapperextensions@1.1.vendor
 
 PRODUCT_COPY_FILES += \
@@ -314,8 +315,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # IFAA manager
-PRODUCT_PACKAGES += \
-    IFAAService
+#PRODUCT_PACKAGES += \
+#    IFAAService
 
 # IPACM
 PRODUCT_PACKAGES += \
