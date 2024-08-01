@@ -9,6 +9,7 @@ persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
 
 # Camera
+persist.sys.cam.skip_detach_image=true
 persist.vendor.camera.privapp.list=com.android.camera
 log.tag.CHIUSECASE=ERROR
 
