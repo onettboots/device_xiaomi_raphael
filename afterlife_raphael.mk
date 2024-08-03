@@ -15,14 +15,14 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common apolloOS stuff.
-$(call inherit-product, vendor/apollo/config/common.mk)
+# Inherit some common afterlifeOS stuff.
+$(call inherit-product, vendor/afterlife/config/common.mk)
 
 # Maintainer Flag (one word only/no spacing)
-MAINTAINER := Onett Boots(@onettboots)
+MAINTAINER := ΛＲＣＨＩＴΣＣＴツ(@SageOfD6Path)
 
 # GAPPS build flag, if not defined build type is vanilla
-#apollo_GAPPS = full
+#afterlife_GAPPS = full
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -34,19 +34,19 @@ TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_SUPPORTS_BLUR := true
 EXTRA_UDFPS_ANIMATIONS := true
 
-# apollo
-APOLLO_MAINTAINER := OnettBoots
+# Afterlife
+AFTERLIFE_MAINTAINER := OnettBoots
 
-# apollo
-# APOLLO_GAPPS := true
-# APOLLO_CORE := true
-APOLLO_EXTRA := true
+# afterlife
+AFTERLIFE_GAPPS := true
+AFTERLIFE_CORE := true
+AFTERLIFE_EXTRA := true
 
 # Quick Tap Feature
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := apollo_raphael
+PRODUCT_NAME := afterlife_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro
