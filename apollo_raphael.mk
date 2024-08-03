@@ -36,7 +36,7 @@ EXTRA_UDFPS_ANIMATIONS := true
 
 # apollo
 APOLLO_MAINTAINER := OnettBoots
-APOLLO_BUILD_VARIANT := vanilla
+
 # apollo
 # APOLLO_GAPPS := true
 # APOLLO_CORE := true
