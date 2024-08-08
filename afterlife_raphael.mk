@@ -22,7 +22,8 @@ $(call inherit-product, vendor/afterlife/config/common.mk)
 MAINTAINER := ΛＲＣＨＩＴΣＣＴツ(@SageOfD6Path)
 
 # GAPPS build flag, if not defined build type is vanilla
-#afterlife_GAPPS = full
+AFTERLIFE_GAPPS := true
+AFTERLIFE_CORE := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
