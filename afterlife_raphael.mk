@@ -24,7 +24,8 @@ $(call inherit-product, device/xiaomi/raphael/device.mk)
 $(call inherit-product, vendor/afterlife/config/common.mk)
 
 # GAPPS build flag, if not defined build type is vanilla
-#afterlife_GAPPS = full
+AFTERLIFE_GAPPS := true
+AFTERLIFE_CORE := true
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080

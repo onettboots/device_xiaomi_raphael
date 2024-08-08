@@ -16,6 +16,7 @@
 
 package org.lineageos.settings.popupcamera;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -26,14 +27,14 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.Preference.OnPreferenceClickListener;
 import androidx.preference.PreferenceFragment;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import org.lineageos.settings.R;
 
 public class PopupCameraSettingsFragment extends PreferenceFragment
         implements OnPreferenceChangeListener, OnPreferenceClickListener {
     private Preference mCalibrationPreference;
-    private SwitchPreference mAlwaysCameraSwitch;
+    private SwitchPreferenceCompat mAlwaysCameraSwitch;
     private static final String MOTOR_CALIBRATION_KEY = "motor_calibration";
     public static final String KEY_ALWAYS_CAMERA_DIALOG = "always_on_camera_dialog";
 
@@ -46,8 +47,8 @@ public class PopupCameraSettingsFragment extends PreferenceFragment
         mCalibrationPreference = (Preference) findPreference(MOTOR_CALIBRATION_KEY);
         mCalibrationPreference.setOnPreferenceClickListener(this);
 
-        mAlwaysCameraSwitch = (SwitchPreference) findPreference(KEY_ALWAYS_CAMERA_DIALOG);
-        boolean enabled = Settings.System.getInt(getContext().getContentResolver(), KEY_ALWAYS_CAMERA_DIALOG, 0) == 1;
+        mAlwaysCameraSwitch = (SwitchPreferenceCompat) findPreference(KEY_ALWAYS_CAMERA_DIALOG);
+        boolean enabled = Settings.System.getInt(getContext().getContentResolver(),KEY_ALWAYS_CAMERA_DIALOG, 0) == 1;
         mAlwaysCameraSwitch.setChecked(enabled);
         mAlwaysCameraSwitch.setOnPreferenceChangeListener(this);
     }
@@ -57,8 +58,8 @@ public class PopupCameraSettingsFragment extends PreferenceFragment
         if (preference == mAlwaysCameraSwitch) {
             boolean enabled = (Boolean) newValue;
             Settings.System.putInt(getContext().getContentResolver(),
-                    KEY_ALWAYS_CAMERA_DIALOG,
-                    enabled ? 1 : 0);
+                KEY_ALWAYS_CAMERA_DIALOG,
+                enabled ? 1 : 0);
         }
         return true;
     }
@@ -66,20 +67,14 @@ public class PopupCameraSettingsFragment extends PreferenceFragment
     @Override
     public boolean onPreferenceClick(Preference preference) {
         if (MOTOR_CALIBRATION_KEY.equals(preference.getKey())) {
-            MotorCalibrationWarningDialog fragment = new MotorCalibrationWarningDialog(mPopupCameraService);
+            MotorCalibrationWarningDialog fragment = new MotorCalibrationWarningDialog();
             fragment.show(getFragmentManager(), "motor_calibration_warning_dialog");
             return true;
         }
         return false;
     }
 
-    public static class MotorCalibrationWarningDialog extends DialogFragment {
-        private PopupCameraService mPopupCameraService;
-
-        public MotorCalibrationWarningDialog(PopupCameraService popupCameraService) {
-            this.mPopupCameraService = popupCameraService;
-        }
-
+    private class MotorCalibrationWarningDialog extends DialogFragment {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return new AlertDialog.Builder(getActivity())
@@ -87,9 +82,7 @@ public class PopupCameraSettingsFragment extends PreferenceFragment
                     .setMessage(R.string.popup_calibration_warning_text)
                     .setPositiveButton(R.string.popup_camera_calibrate_now,
                             (dialog, which) -> {
-                                if (mPopupCameraService != null) {
-                                    mPopupCameraService.calibrateMotor();
-                                }
+                                mPopupCameraService.calibrateMotor();
                                 dialog.cancel();
                             })
                     .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.cancel())
