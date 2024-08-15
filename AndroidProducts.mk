@@ -13,9 +13,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/afterlife_raphael.mk
+    $(LOCAL_DIR)/infinity_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    afterlife_raphael-user \
-    afterlife_raphael-userdebug \
-    afterlife_raphael-eng
+    infinity_raphael-user \
+    infinity_raphael-userdebug \
+    infinity_raphael-eng

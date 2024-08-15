@@ -20,12 +20,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from raphael device
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common afterlifeOS stuff.
-$(call inherit-product, vendor/afterlife/config/common.mk)
-
-# GAPPS build flag, if not defined build type is vanilla
-AFTERLIFE_GAPPS := true
-AFTERLIFE_CORE := true
+# Inherit some common Infinity stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -37,19 +33,15 @@ TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_SUPPORTS_BLUR := true
 EXTRA_UDFPS_ANIMATIONS := true
 
-# Afterlife
-AFTERLIFE_MAINTAINER := OnettBoots
-
-# afterlife
-AFTERLIFE_GAPPS := true
-AFTERLIFE_CORE := true
-AFTERLIFE_EXTRA := true
+# Infinity
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := OnettBoots
 
 # Quick Tap Feature
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := afterlife_raphael
+PRODUCT_NAME := infinity_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro
