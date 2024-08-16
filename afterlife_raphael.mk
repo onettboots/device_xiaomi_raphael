@@ -24,8 +24,8 @@ TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 TARGET_BOOT_ANIMATION_RES := 1080
 # Extra Flags.
-AFTERLIFE_GAPPS := true
-AFTERLIFE_CORE := true
+# AFTERLIFE_GAPPS := true
+# AFTERLIFE_CORE := true
 AFTERLIFE_EXTRA := true
 
 # Device identifier. This must come after all inclusions.
