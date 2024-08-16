@@ -15,23 +15,21 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common RisingOs stuff.
-$(call inherit-product, vendor/rising/config/rising.mk)
+# Inherit some common afterlifeOs stuff.
+$(call inherit-product, vendor/afterlife/config/common.mk)
 
-# RisingOs Flags
-RISING_CHIPSET := SDM855
-RISING_MAINTAINER := Mohammad Al Arabi
-WITH_GMS := true
+# afterlifeOs Flags
+AFTERLIFE_MAINTAINER := OnettBoots
 TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 TARGET_BOOT_ANIMATION_RES := 1080
 # Extra Flags.
-RISING_BATTERY := 4000mah
-RISING_STORAGE := 256gb
-RISING_RAM := 6/8gb
+AFTERLIFE_GAPPS := true
+AFTERLIFE_CORE := true
+AFTERLIFE_EXTRA := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := rising_raphael
+PRODUCT_NAME := afterlife_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro

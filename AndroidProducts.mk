@@ -13,9 +13,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/rising_raphael.mk
+    $(LOCAL_DIR)/afterlife_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    rising_raphael-user \
-    rising_raphael-userdebug \
-    rising_raphael-eng
+    afterlife_raphael-user \
+    afterlife_raphael-userdebug \
+    afterlife_raphael-eng
