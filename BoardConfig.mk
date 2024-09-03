@@ -105,6 +105,10 @@ DEVICE_MANIFEST_FILE += \
 DEVICE_MATRIX_FILE := \
     $(DEVICE_PATH)/vintf/compatibility_matrix.xml
 
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/vintf/framework_compatibility_matrix.xml \
+    vendor/afterlife/config/device_framework_matrix.xml
+
 ODM_MANIFEST_FILES += \
     $(DEVICE_PATH)/vintf/manifest-qva.xml
 
@@ -239,7 +243,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/xiaomi/raphael/sepolicy/sepolicy.mk
 
 # Vendor init
