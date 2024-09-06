@@ -21,7 +21,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
 
 # MiuiCamera
-$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
+# $(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -278,7 +278,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.3.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
@@ -294,11 +294,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti \
-    android.hardware.health-service.qti_recovery
-
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1.vendor
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
