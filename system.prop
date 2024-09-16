@@ -22,24 +22,6 @@ vendor.post_boot.parsed=1
 # GPS
 persist.vendor.overlay.izat.optin=rro
 
-# Graphics
-debug.force_no_blanking=true
-ro.opengles.version=196610
-debug.cpurend.vsync=false
-
-# HWUI
-ro.hwui.texture_cache_size=72
-ro.hwui.layer_cache_size=48
-ro.hwui.r_buffer_cache_size=8
-ro.hwui.path_cache_size=32
-ro.hwui.gradient_cache_size=1
-ro.hwui.drop_shadow_cache_size=6
-ro.hwui.texture_cache_flushrate=0.4
-ro.hwui.text_small_cache_width=1024
-ro.hwui.text_small_cache_height=1024
-ro.hwui.text_large_cache_width=2048
-ro.hwui.text_large_cache_height=1024
-
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
@@ -128,9 +110,6 @@ persist.vendor.sensors.enable.mag_filter=true
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
-# WiFi
-config.disable_rtt=true
-
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
@@ -140,17 +119,6 @@ debug.media.transcoding.codec_max_operating_rate_1080P=120
 
 # System Server
 arm64.memtag.process.system_server=off
-
-# Better Ram
-ro.config.fha_enable=true
-ro.sys.fw.bg_apps_limit=32
-ro.config.dha_cached_max=16
-ro.config.dha_empty_max=42
-ro.config.dha_empty_init=32
-ro.config.dha_lmk_scale=0.545
-ro.config.dha_th_rate=2.3
-ro.config.sdha_apps_bg_max=64
-ro.config.sdha_apps_bg_min=8
 
 # lmkd
 ro.lmk.thrashing_limit=200
