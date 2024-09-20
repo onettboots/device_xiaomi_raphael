@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
 # Inherit some common Afterlife stuff.
-$(call inherit-product, vendor/afterlife/config/common.mk)
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
 # afterlife
 AFTERLIFE_GAPPS := true
