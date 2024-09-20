@@ -297,8 +297,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti \
-    android.hardware.health-service.qti_recovery
+    android.hardware.health-service.example \
+    android.hardware.health-service.example_recovery
 
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1.vendor
