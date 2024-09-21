@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2022 The LineageOS Project
+# Copyright (C) 2021-2022 The afterlifeOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -12,22 +12,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from raphael device
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common afterlife stuff.
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
-# Matrixx
-MATRIXX_BUILD_TYPE := Personal
-MATRIXX_MAINTAINER := NATO66613
-MATRIXX_CHIPSET := SM8150
-MATRIXX_BATTERY := 4000mAh
-MATRIXX_DISPLAY := 1080x2400
-WITH_GMS := true
+AFTERLIFE_GAPPS := true
+AFTERLIFE_MAINTAINER := OnettBoots
 TARGET_HAS_UDFPS := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR := true
+EXTRA_UDFPS_ANIMATIONS := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_raphael
+PRODUCT_NAME := afterlife_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
