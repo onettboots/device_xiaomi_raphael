@@ -203,6 +203,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
+    android.hardware.graphics.allocator@3.0 \
+    android.hardware.graphics.allocator@3.0.vendor \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.memtrack-service \
