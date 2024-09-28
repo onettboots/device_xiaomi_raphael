@@ -15,11 +15,8 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common afterlifeOS stuff.
-$(call inherit-product, vendor/afterlife/config/common.mk)
-
-# Maintainer Flag (one word only/no spacing)
-MAINTAINER := ΛＲＣＨＩＴΣＣＴツ(@SageOfD6Path)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # GAPPS build flag, if not defined build type is vanilla
 #afterlife_GAPPS = full
@@ -27,26 +24,21 @@ MAINTAINER := ΛＲＣＨＩＴΣＣＴツ(@SageOfD6Path)
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Charging Animation
-TARGET_INCLUDE_PIXEL_CHARGER := true
-
 # Disable/Enable Blur Support, default is false
 TARGET_SUPPORTS_BLUR := true
+TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 
-# Afterlife
-AFTERLIFE_MAINTAINER := OnettBoots
-
-# afterlife
-AFTERLIFE_GAPPS := true
-AFTERLIFE_CORE := true
-AFTERLIFE_EXTRA := true
+# EverestOS official flags
+EVEREST_MAINTAINER := OnettBoots
+EVEREST_BUILD_TYPE := UNOFFICIAL
+WITH_GAPPS := true
 
 # Quick Tap Feature
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := afterlife_raphael
+PRODUCT_NAME := lineage_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro
