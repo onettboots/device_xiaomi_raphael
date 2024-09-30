@@ -4,16 +4,6 @@ on post-fs-data
     # Disable zram readahead
     write /proc/sys/vm/page-cluster 0
 
-on property:sys.post_boot.parsed=1
-    setprop vendor.post_boot.parsed 1
-
-on init 
-    exec - system system -- /vendor/bin/boolx_kprofiles
-
-on property:vendor.post_boot.parsed=1
-    exec u:r:magisk:s0 root root -- /vendor/bin/boolx_kprofiles
-    exec u:r:su:s0 root root -- /vendor/bin/boolx_kprofiles
-
 # Migrate tasks again in case kernel threads are created during boot
 on property:sys.boot_completed=1
     copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
