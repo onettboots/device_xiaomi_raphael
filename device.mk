@@ -317,8 +317,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.qti.dcvs.sh \
-    init.raphael_boolx.rc \
     init.raphael.rc \
+    init.raphael_boolx.rc \
     init.raphael.wlan.rc \
     init.recovery.qcom.rc \
     init.target.rc \
@@ -447,9 +447,6 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     vendor.qti.hardware.perf@2.2.vendor \
     libqti-perfd-client
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/boolx_kprofiles:$(TARGET_COPY_OUT_VENDOR)/bin/boolx_kprofiles
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json

@@ -149,16 +149,6 @@ on boot
     chown system system /sys/kernel/kprofiles/kp_mode
     chmod 0660 /sys/kernel/kprofiles/kp_mode
 
-on boot
-    # Memulai mode monitoring untuk /sys/kernel/kprofiles/kp_mode
-    start monitor_kp_mode
-
-service monitor_kp_mode /vendor/bin/sh /vendor/bin/boolx_kprofiles &
-    class main
-    user root
-    group root
-    oneshot
-
 on property:sys.boot_completed=1
     # STOP EATING MY BATTERY AFTER 100H OF UPTIME FUCK YOU
     stop statsd
